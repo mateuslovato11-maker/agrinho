@@ -1,17 +1,29 @@
-const btnMissao = document.getElementById("btnMissao");
-const mensagem = document.getElementById("mensagem");
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // Seleciona todos os botões da barra lateral e todas as seções de tela
+    const botoes = document.querySelectorAll(".btn-controle");
+    const telas = document.querySelectorAll(".tela-painel");
 
-btnMissao.addEventListener("click", () => {
-    mensagem.innerHTML =
-    "Promover uma agricultura forte, inovadora e sustentável, garantindo produtividade, preservação ambiental e qualidade de vida para as futuras gerações.";
-});
+    botoes.forEach(botao => {
+        botao.addEventListener("click", () => {
+            
+            // 1. Remove a classe 'active' de todos os botões
+            botoes.forEach(b => b.classList.remove("active"));
+            
+            // 2. Adiciona a classe 'active' apenas no botão clicado
+            botao.classList.add("active");
 
-const btnSaibaMais = document.getElementById("btnSaibaMais");
+            // 3. Remove a classe 'ativa' de todas as telas do painel
+            telas.forEach(tela => tela.classList.remove("ativa"));
 
-btnSaibaMais.addEventListener("click", () => {
-    document
-        .getElementById("sobre")
-        .scrollIntoView({
-            behavior: "smooth"
+            // 4. Pega o valor do atributo 'data-target' do botão clicado
+            const alvo = botao.getAttribute("data-target");
+
+            // 5. Encontra a tela com o ID correspondente e a torna visível
+            const telaAlvo = document.getElementById(alvo);
+            if (telaAlvo) {
+                telaAlvo.classList.add("ativa");
+            }
         });
+    });
 });

@@ -3,94 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte, Futuro Sustentável</title>
+    <title>BioFuturo - Painel AgroSustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <h1>🌱 Agro Forte</h1>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#praticas">Práticas Sustentáveis</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Bio<span>Futuro</span></h2>
+                <p>Status: Ativo</p>
+            </div>
+            <nav class="menu-controles">
+                <button class="btn-controle active" data-target="producao">📊 Produção Alta</button>
+                <button class="btn-controle" data-target="meioambiente">🌱 Meio Ambiente</button>
+                <button class="btn-controle" data-target="equilibrio">🔄 O Equilíbrio</button>
+            </nav>
+        </aside>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h2>Futuro Sustentável</h2>
-            <p>Equilíbrio entre produção agrícola e preservação ambiental.</p>
-            <button id="btnSaibaMais">Saiba Mais</button>
-        </div>
-    </section>
+        <main class="conteudo-principal">
+            <header class="topo-dashboard">
+                <h1>Monitoramento Agro Sustentável v2.6</h1>
+                <div class="data-atual" id="data-display">Setor: Alfa-1</div>
+            </header>
 
-    <section id="sobre" class="section">
-        <h2>Sobre o Projeto</h2>
-        <p>
-            O agronegócio moderno busca aumentar a produtividade sem comprometer
-            os recursos naturais. A sustentabilidade é fundamental para garantir
-            alimentos de qualidade e preservar o meio ambiente para as próximas gerações.
-        </p>
-    </section>
+            <section id="producao" class="tela-painel ativa">
+                <h2>Otimização de Safra</h2>
+                <p>Dados simulados em tempo real para maximizar a colheita sem expandir a área de cultivo.</p>
+                <div class="grid-status">
+                    <div class="status-card">
+                        <h4>Eficiência Vertical</h4>
+                        <span class="numero">+25%</span>
+                    </div>
+                    <div class="status-card">
+                        <h4>Desperdício de Grãos</h4>
+                        <span class="numero diminuir">-18%</span>
+                    </div>
+                </div>
+            </section>
 
-    <section id="praticas" class="section cards">
-        <h2>Práticas Sustentáveis</h2>
+            <section id="meioambiente" class="tela-painel">
+                <h2>Indicadores Ecológicos</h2>
+                <p>Monitoramento ativo dos recursos naturais e regeneração da biodiversidade local.</p>
+                <div class="grid-status">
+                    <div class="status-card ecológico">
+                        <h4>Economia de Água</h4>
+                        <span class="numero">40 Milhões L</span>
+                    </div>
+                    <div class="status-card ecológico">
+                        <h4>Créditos de Carbono</h4>
+                        <span class="numero">+340 Tzs</span>
+                    </div>
+                </div>
+            </section>
 
-        <div class="card">
-            <h3>🌿 Agricultura de Precisão</h3>
-            <p>
-                Uso de tecnologia para otimizar recursos e reduzir desperdícios.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>💧 Gestão da Água</h3>
-            <p>
-                Sistemas de irrigação eficientes para economizar água.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🌳 Preservação Ambiental</h3>
-            <p>
-                Proteção de áreas verdes e recuperação de matas nativas.
-            </p>
-        </div>
-    </section>
-
-    <section class="dados">
-        <h2>Nossa Missão</h2>
-        <p id="mensagem">
-            Clique no botão abaixo para conhecer nossa visão.
-        </p>
-
-        <button id="btnMissao">
-            Mostrar Missão
-        </button>
-    </section>
-
-    <section id="contato" class="section">
-        <h2>Contato</h2>
-
-        <form>
-            <input type="text" placeholder="Seu nome" required>
-            <input type="email" placeholder="Seu e-mail" required>
-            <textarea placeholder="Sua mensagem"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>
-            © 2025 Agro Forte - Futuro Sustentável
-        </p>
-    </footer>
+            <section id="equilibrio" class="tela-painel">
+                <h2>A Meta: Impacto Zero</h2>
+                <p>Quando a tecnologia e a natureza trabalham juntas, o resultado é a sustentabilidade real.</p>
+                <blockquote class="frase-impacto">
+                    "Produzir o suficiente para alimentar o mundo, preservando o suficiente para garantir o amanhã."
+                </blockquote>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
