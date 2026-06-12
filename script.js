@@ -1,22 +1,17 @@
-// Aguarda o documento carregar completamente
-document.addEventListener("DOMContentLoaded", function() {
-    
-    // Seleciona o botão e o texto extra
-    const botaoAlerta = document.getElementById("btn-alerta");
-    const textoExtra = document.getElementById("texto-extra");
+const btnMissao = document.getElementById("btnMissao");
+const mensagem = document.getElementById("mensagem");
 
-    // Adiciona um evento de clique ao botão
-    botaoAlerta.addEventListener("click", function() {
-        // Verifica se o texto está escondido
-        if (textoExtra.classList.contains("escondido")) {
-            // Mostra o texto e muda o texto do botão
-            textoExtra.classList.remove("escondido");
-            botaoAlerta.textContent = "Ocultar Estatística";
-        } else {
-            // Esconde o texto novamente e volta o botão ao normal
-            textoExtra.classList.add("escondido");
-            botaoAlerta.textContent = "Ver Estatística";
-        }
-    });
+btnMissao.addEventListener("click", () => {
+    mensagem.innerHTML =
+    "Promover uma agricultura forte, inovadora e sustentável, garantindo produtividade, preservação ambiental e qualidade de vida para as futuras gerações.";
+});
 
+const btnSaibaMais = document.getElementById("btnSaibaMais");
+
+btnSaibaMais.addEventListener("click", () => {
+    document
+        .getElementById("sobre")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
 });

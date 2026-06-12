@@ -9,64 +9,88 @@
 <body>
 
     <header>
-        <div class="container">
-            <div class="logo">Agro<span>Sustentável</span></div>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#pilares">Pilares</a></li>
-                    <li><a href="#sobre">O Equilíbrio</a></li>
-                    <li><a href="#contato" class="btn-nav">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <h1>🌱 Agro Forte</h1>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#praticas">Práticas Sustentáveis</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Agro Forte, Futuro Sustentável</h1>
-            <p>O equilíbrio perfeito entre a alta produtividade no campo e a preservação do meio ambiente.</p>
-            <a href="#pilares" class="btn-principal">Descubra Como</a>
+            <h2>Futuro Sustentável</h2>
+            <p>Equilíbrio entre produção agrícola e preservação ambiental.</p>
+            <button id="btnSaibaMais">Saiba Mais</button>
         </div>
     </section>
 
-    <section id="pilares" class="pilares-section">
-        <div class="container">
-            <h2>Nossos Pilares para o Futuro</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Tecnologia Verde</h3>
-                    <p>Uso de drones, IA e sensores para otimizar o uso de água e insumos, reduzindo o impacto ambiental.</p>
-                </div>
-                <div class="card">
-                    <h3>Preservação</h3>
-                    <p>Práticas de rotação de culturas e manejo direto que protegem o solo e recuperam áreas degradadas.</p>
-                </div>
-                <div class="card">
-                    <h3>Produção Forte</h3>
-                    <p>Garantir a segurança alimentar global através de colheitas eficientes e recordes de produtividade.</p>
-                </div>
-            </div>
+    <section id="sobre" class="section">
+        <h2>Sobre o Projeto</h2>
+        <p>
+            O agronegócio moderno busca aumentar a produtividade sem comprometer
+            os recursos naturais. A sustentabilidade é fundamental para garantir
+            alimentos de qualidade e preservar o meio ambiente para as próximas gerações.
+        </p>
+    </section>
+
+    <section id="praticas" class="section cards">
+        <h2>Práticas Sustentáveis</h2>
+
+        <div class="card">
+            <h3>🌿 Agricultura de Precisão</h3>
+            <p>
+                Uso de tecnologia para otimizar recursos e reduzir desperdícios.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💧 Gestão da Água</h3>
+            <p>
+                Sistemas de irrigação eficientes para economizar água.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌳 Preservação Ambiental</h3>
+            <p>
+                Proteção de áreas verdes e recuperação de matas nativas.
+            </p>
         </div>
     </section>
 
-    <section id="sobre" class="sobre-section">
-        <div class="container sobre-conteudo">
-            <div class="sobre-texto">
-                <h2>Produzir sem Destruir</h2>
-                <p>O futuro do agronegócio não aceita mais a divisão entre economia e ecologia. Hoje, a tecnologia nos permite monitorar lavouras em tempo real, economizar recursos hídricos e garantir que a produção cresça em harmonia com a biodiversidade local.</p>
-                <button id="btn-alerta" class="btn-secundario">Ver Estatística</button>
-                <p id="texto-extra" class="escondido">Estudos apontam que o uso de agricultura de precisão pode reduzir o desperdício de defensivos agrícolas em até 30%!</p>
-            </div>
-        </div>
+    <section class="dados">
+        <h2>Nossa Missão</h2>
+        <p id="mensagem">
+            Clique no botão abaixo para conhecer nossa visão.
+        </p>
+
+        <button id="btnMissao">
+            Mostrar Missão
+        </button>
     </section>
 
-    <footer id="contato">
-        <div class="container">
-            <p>&copy; 2026 AgroSustentável. Cultivando o amanhã, hoje.</p>
-        </div>
+    <section id="contato" class="section">
+        <h2>Contato</h2>
+
+        <form>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <textarea placeholder="Sua mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>
+            © 2025 Agro Forte - Futuro Sustentável
+        </p>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
