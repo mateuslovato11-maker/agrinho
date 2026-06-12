@@ -1,189 +1,221 @@
-/* Reset e Variáveis de Cores Neon */
+/* Design System Clean & Editorial */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace, sans-serif;
-}
-
-:root {
-    --bg-principal: #0b0f12;
-    --bg-card: #131a20;
-    --neon-verde: #39ff14;
-    --neon-azul: #00e5ff;
-    --texto-claro: #e0e6ed;
-    --texto-escuro: #627280;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: -0.02em;
 }
 
 body {
-    background-color: var(--bg-principal);
-    color: var(--texto-claro);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    background-color: #fafafa;
+    color: #111111;
+    overflow-x: hidden;
 }
 
-/* Estrutura do Dashboard */
-.dashboard {
-    display: flex;
-    width: 95vw;
-    height: 90vh;
-    background: rgba(19, 26, 32, 0.6);
-    border: 1px solid #1f2d3d;
-    border-radius: 16px;
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.05);
-    overflow: hidden;
-}
-
-/* Barra Lateral */
-.sidebar {
-    width: 25%;
-    background-color: #0d1317;
-    border-right: 1px solid #1f2d3d;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.logo h2 {
-    color: var(--texto-claro);
-}
-
-.logo span {
-    color: var(--neon-verde);
-    text-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
-}
-
-.logo p {
-    font-size: 12px;
-    color: var(--neon-azul);
-}
-
-.menu-controles {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.btn-controle {
-    background: none;
-    border: 1px solid #243647;
-    color: var(--texto-claro);
-    padding: 15px;
-    text-align: left;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.btn-controle:hover {
-    border-color: var(--neon-azul);
-    background: rgba(0, 229, 255, 0.05);
-}
-
-.btn-controle.active {
-    background: rgba(57, 255, 20, 0.1);
-    border-color: var(--neon-verde);
-    color: var(--neon-verde);
-    box-shadow: 0 0 10px rgba(57, 255, 20, 0.1);
-}
-
-/* Conteúdo Principal */
-.conteudo-principal {
-    width: 75%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.topo-dashboard {
+/* Header Fino e Minimalista */
+.nav-clean {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #1f2d3d;
-    padding-bottom: 20px;
+    padding: 30px 6%;
+    background-color: rgba(250, 250, 250, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
-.topo-dashboard h1 {
-    font-size: 20px;
-    color: var(--texto-claro);
+.logo {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
-.data-display {
-    color: var(--texto-escuro);
+.logo span {
+    color: #3b533e;
 }
 
-/* Telas Ocultas/Ativas */
-.tela-painel {
-    display: none;
-    animation: fadeIn 0.4s ease forwards;
+nav a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 30px;
+    font-size: 14px;
+    transition: color 0.3s;
 }
 
-.tela-painel.ativa {
+nav a:hover {
+    color: #111;
+}
+
+/* Layout Editorial (Texto complexo + Imagem lateral) */
+.secao-editorial {
+    padding: 160px 6% 80px 6%;
+    display: flex;
+    align-items: center;
+    gap: 8%;
+    min-height: 80vh;
+}
+
+.bloco-texto {
+    flex: 1;
+}
+
+.etiqueta {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #3b533e;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     display: block;
+    margin-bottom: 20px;
 }
 
-.tela-painel h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: var(--neon-azul);
+.bloco-texto h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 24px;
+    color: #111;
 }
 
-.tela-painel p {
-    color: var(--texto-escuro);
-    margin-bottom: 30px;
+.paragrafo-complexo {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    text-align: justify;
 }
 
-/* Grids e Cards de Status */
-.grid-status {
+.bloco-imagem {
+    flex: 1;
+}
+
+.bloco-imagem img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: grayscale(20%);
+    transition: filter 0.5s ease;
+}
+
+.bloco-imagem img:hover {
+    filter: grayscale(0%);
+}
+
+/* Área Interativa - Simulador */
+.secao-simulador {
+    background-color: #f0f2f0;
+    padding: 100px 6%;
+}
+
+.container-simulador {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.secao-simulador h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    color: #566458;
+    margin-bottom: 40px;
+}
+
+/* Customização do Input Range (Slider) */
+.controle-slider {
+    background: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.controle-slider label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+#nivel-tecnologia {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    outline: none;
+}
+
+#nivel-tecnologia::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3b533e;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#nivel-tecnologia::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Barras Dinâmicas de Progresso */
+.painel-metricas {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 40px;
 }
 
-.status-card {
-    background: var(--bg-card);
-    border: 1px solid #243647;
-    padding: 25px;
-    border-radius: 12px;
-}
-
-.status-card h4 {
-    color: var(--texto-escuro);
+.metrica h3 {
+    font-size: 16px;
+    font-weight: 500;
     margin-bottom: 10px;
+    color: #333;
 }
 
-.status-card .numero {
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--neon-azul);
+.barra-progresso {
+    background-color: #ddd;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 
-.status-card .numero.diminuir {
-    color: #ff3366;
+.progresso {
+    height: 100%;
+    width: 50%; /* Controlado via JS */
+    background-color: #3b533e;
+    transition: width 0.3s ease, background-color 0.3s;
 }
 
-.status-card.ecológico .numero {
-    color: var(--neon-verde);
+.desc-metrica {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
 }
 
-/* Customização da Aba de Equilíbrio */
-.frase-impacto {
-    font-style: italic;
-    border-left: 4px solid var(--neon-verde);
-    padding-left: 20px;
-    font-size: 20px;
-    color: var(--texto-claro);
-    margin-top: 40px;
+/* Rodapé */
+.rodape-clean {
+    padding: 40px 6%;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    border-top: 1px solid #eee;
 }
 
-/* Animação de transição */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .secao-editorial {
+        flex-direction: column;
+        padding-top: 100px;
+    }
+    .painel-metricas {
+        grid-template-columns: 1fr;
+    }
 }

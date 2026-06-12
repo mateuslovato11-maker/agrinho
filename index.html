@@ -3,69 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioFuturo - Painel AgroSustentável</title>
+    <title>Sustentabilidade Linear — Agro Futuro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="dashboard">
-        <aside class="sidebar">
-            <div class="logo">
-                <h2>Bio<span>Futuro</span></h2>
-                <p>Status: Ativo</p>
+    <header class="nav-clean">
+        <div class="logo">Ecos_<span>Agro</span></div>
+        <nav>
+            <a href="#tese">Diretrizes</a>
+            <a href="#simulador">Simulador</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tese" class="secao-editorial">
+            <div class="bloco-texto">
+                <span class="etiqueta">Ensaio Técnico 2026</span>
+                <h1>A urgência da transição linear no campo.</h1>
+                <p class="paragrafo-complexo">
+                    O grande desafio do século XXI não reside apenas na capacidade de expansão calórica para a segurança alimentar, mas na dissociação completa entre o crescimento produtivo e a degradação ecossistêmica. Através da aplicação de matrizes bioeconômicas e inteligência agronômica descentralizada, o ecossistema agrícola moderno passa a operar não como um agente de exploração, mas como um elemento ativo de regeneração ambiental.
+                </p>
             </div>
-            <nav class="menu-controles">
-                <button class="btn-controle active" data-target="producao">📊 Produção Alta</button>
-                <button class="btn-controle" data-target="meioambiente">🌱 Meio Ambiente</button>
-                <button class="btn-controle" data-target="equilibrio">🔄 O Equilíbrio</button>
-            </nav>
-        </aside>
+            <div class="bloco-imagem">
+                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1200" alt="Biotecnologia aplicada ao campo">
+            </div>
+        </section>
 
-        <main class="conteudo-principal">
-            <header class="topo-dashboard">
-                <h1>Monitoramento Agro Sustentável v2.6</h1>
-                <div class="data-atual" id="data-display">Setor: Alfa-1</div>
-            </header>
+        <section id="simulador" class="secao-simulador">
+            <div class="container-simulador">
+                <h2>Métrica de Impacto Integrado</h2>
+                <p class="subtitulo">Ajuste o nível de adoção tecnológica e observe a resposta dos indicadores ecológicos e de rendimento em tempo real.</p>
+                
+                <div class="controle-slider">
+                    <label for="nivel-tecnologia">Nível de Implementação Tecnológica: <span id="valor-slider">50%</span></label>
+                    <input type="range" id="nivel-tecnologia" min="0" max="100" value="50">
+                </div>
 
-            <section id="producao" class="tela-painel ativa">
-                <h2>Otimização de Safra</h2>
-                <p>Dados simulados em tempo real para maximizar a colheita sem expandir a área de cultivo.</p>
-                <div class="grid-status">
-                    <div class="status-card">
-                        <h4>Eficiência Vertical</h4>
-                        <span class="numero">+25%</span>
+                <div class="painel-metricas">
+                    <div class="metrica">
+                        <h3>Eficiência de Produção</h3>
+                        <div class="barra-progresso"><div id="barra-producao" class="progresso"></div></div>
+                        <p id="txt-producao" class="desc-metrica">Rendimento regular baseado em práticas convencionais.</p>
                     </div>
-                    <div class="status-card">
-                        <h4>Desperdício de Grãos</h4>
-                        <span class="numero diminuir">-18%</span>
+                    
+                    <div class="metrica">
+                        <h3>Preservação do Ecossistema</h3>
+                        <div class="barra-progresso"><div id="barra-ambiente" class="progresso"></div></div>
+                        <p id="txt-ambiente" class="desc-metrica">Pegada de carbono moderada com manejo padrão.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <section id="meioambiente" class="tela-painel">
-                <h2>Indicadores Ecológicos</h2>
-                <p>Monitoramento ativo dos recursos naturais e regeneração da biodiversidade local.</p>
-                <div class="grid-status">
-                    <div class="status-card ecológico">
-                        <h4>Economia de Água</h4>
-                        <span class="numero">40 Milhões L</span>
-                    </div>
-                    <div class="status-card ecológico">
-                        <h4>Créditos de Carbono</h4>
-                        <span class="numero">+340 Tzs</span>
-                    </div>
-                </div>
-            </section>
-
-            <section id="equilibrio" class="tela-painel">
-                <h2>A Meta: Impacto Zero</h2>
-                <p>Quando a tecnologia e a natureza trabalham juntas, o resultado é a sustentabilidade real.</p>
-                <blockquote class="frase-impacto">
-                    "Produzir o suficiente para alimentar o mundo, preservando o suficiente para garantir o amanhã."
-                </blockquote>
-            </section>
-        </main>
-    </div>
+    <footer class="rodape-clean">
+        <p>Desenvolvimento Científico e Tecnológico voltado ao Agronegócio Sustentável.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
