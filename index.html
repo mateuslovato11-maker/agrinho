@@ -3,62 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustentabilidade Linear — Agro Futuro</title>
+    <title>Agro Forte - Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="nav-clean">
-        <div class="logo">Ecos_<span>Agro</span></div>
-        <nav>
-            <a href="#tese">Diretrizes</a>
-            <a href="#simulador">Simulador</a>
+    <!-- Header/Navegação -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">🌱</span>
+                <h1>Agro<span>Forte</span></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#praticas">Práticas</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#impacto">Impacto</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="tese" class="secao-editorial">
-            <div class="bloco-texto">
-                <span class="etiqueta">Ensaio Técnico 2026</span>
-                <h1>A urgência da transição linear no campo.</h1>
-                <p class="paragrafo-complexo">
-                    O grande desafio do século XXI não reside apenas na capacidade de expansão calórica para a segurança alimentar, mas na dissociação completa entre o crescimento produtivo e a degradação ecossistêmica. Através da aplicação de matrizes bioeconômicas e inteligência agronômica descentralizada, o ecossistema agrícola moderno passa a operar não como um agente de exploração, mas como um elemento ativo de regeneração ambiental.
-                </p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Agro Forte, Futuro Sustentável</h2>
+            <p>Equilíbrio entre produção agrícola e preservação ambiental para um amanhã mais verde e produtivo</p>
+            <div class="hero-buttons">
+                <a href="#sobre" class="btn btn-primary">Saiba Mais</a>
+                <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
             </div>
-            <div class="bloco-imagem">
-                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1200" alt="Biotecnologia aplicada ao campo">
-            </div>
-        </section>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
 
-        <section id="simulador" class="secao-simulador">
-            <div class="container-simulador">
-                <h2>Métrica de Impacto Integrado</h2>
-                <p class="subtitulo">Ajuste o nível de adoção tecnológica e observe a resposta dos indicadores ecológicos e de rendimento em tempo real.</p>
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre o Projeto</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>O projeto Agro Forte nasceu da necessidade de conciliar a crescente demanda por alimentos com a urgente necessidade de preservar nossos recursos naturais. Acreditamos que é possível produzir mais e melhor, respeitando os limites do planeta.</p>
+                    <p>Nossa missão é promover práticas agrícolas sustentáveis que garantam a segurança alimentar das futuras gerações, mantendo o equilíbrio dos ecossistemas e a biodiversidade.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="40">0</span>
+                            <span class="stat-label">% de aumento na produtividade</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="60">0</span>
+                            <span class="stat-label">% de redução no uso de água</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="80">0</span>
+                            <span class="stat-label">% menos agrotóxicos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-image">
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600" alt="Agricultura Sustentável">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Práticas Sustentáveis -->
+    <section id="praticas" class="praticas">
+        <div class="container">
+            <h2 class="section-title">Práticas Sustentáveis</h2>
+            <p class="section-subtitle">Conheça as principais técnicas que promovem o equilíbrio entre produção e meio ambiente</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🌾</div>
+                    <h3>Rotação de Culturas</h3>
+                    <p>Alternância planejada de diferentes culturas na mesma área, melhorando a saúde do solo e reduzindo pragas naturalmente.</p>
+                </div>
                 
-                <div class="controle-slider">
-                    <label for="nivel-tecnologia">Nível de Implementação Tecnológica: <span id="valor-slider">50%</span></label>
-                    <input type="range" id="nivel-tecnologia" min="0" max="100" value="50">
+                <div class="card">
+                    <div class="card-icon">💧</div>
+                    <h3>Irrigação Inteligente</h3>
+                    <p>Sistemas de irrigação por gotejamento e sensores de umidade que otimizam o uso da água e reduzem o desperdício.</p>
                 </div>
+                
+                <div class="card">
+                    <div class="card-icon">🌳</div>
+                    <h3>Sistemas Agroflorestais</h3>
+                    <p>Integração de árvores com culturas agrícolas, criando ecossistemas produtivos e biodiversos.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🐝</div>
+                    <h3>Controle Biológico</h3>
+                    <p>Uso de predadores naturais para controle de pragas, eliminando a necessidade de agrotóxicos prejudiciais.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">♻️</div>
+                    <h3>Compostagem</h3>
+                    <p>Transformação de resíduos orgânicos em adubo natural, fechando o ciclo de nutrientes e melhorando o solo.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🌞</div>
+                    <h3>Energia Renovável</h3>
+                    <p>Utilização de painéis solares e biodigestores para gerar energia limpa nas propriedades rurais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="painel-metricas">
-                    <div class="metrica">
-                        <h3>Eficiência de Produção</h3>
-                        <div class="barra-progresso"><div id="barra-producao" class="progresso"></div></div>
-                        <p id="txt-producao" class="desc-metrica">Rendimento regular baseado em práticas convencionais.</p>
-                    </div>
-                    
-                    <div class="metrica">
-                        <h3>Preservação do Ecossistema</h3>
-                        <div class="barra-progresso"><div id="barra-ambiente" class="progresso"></div></div>
-                        <p id="txt-ambiente" class="desc-metrica">Pegada de carbono moderada com manejo padrão.</p>
+    <!-- Seção Tecnologias -->
+    <section id="tecnologias" class="tecnologias">
+        <div class="container">
+            <h2 class="section-title">Tecnologias Inovadoras</h2>
+            <p class="section-subtitle">A tecnologia como aliada da sustentabilidade no campo</p>
+            
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-number">01</div>
+                    <h3>Agricultura de Precisão</h3>
+                    <p>Uso de GPS, drones e sensores para monitoramento detalhado das lavouras, aplicando insumos apenas onde necessário.</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-number">02</div>
+                    <h3>Biotecnologia</h3>
+                    <p>Desenvolvimento de variedades mais resistentes e produtivas, adaptadas às mudanças climáticas.</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-number">03</div>
+                    <h3>Big Data Agrícola</h3>
+                    <p>Análise de dados para previsão de safras, otimização de recursos e tomada de decisões mais assertivas.</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-number">04</div>
+                    <h3>Blockchain Rural</h3>
+                    <p>Rastreabilidade completa da produção, garantindo transparência e segurança alimentar do campo à mesa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Impacto -->
+    <section id="impacto" class="impacto">
+        <div class="container">
+            <h2 class="section-title">Nosso Impacto</h2>
+            <p class="section-subtitle">Resultados que transformam o agronegócio e preservam o planeta</p>
+            
+            <div class="impacto-grid">
+                <div class="impacto-card">
+                    <h3>Econômico</h3>
+                    <ul>
+                        <li>✓ Redução de custos operacionais</li>
+                        <li>✓ Aumento da produtividade</li>
+                        <li>✓ Acesso a novos mercados</li>
+                        <li>✓ Valorização dos produtos</li>
+                    </ul>
+                </div>
+                
+                <div class="impacto-card">
+                    <h3>Social</h3>
+                    <ul>
+                        <li>✓ Geração de empregos verdes</li>
+                        <li>✓ Qualidade de vida no campo</li>
+                        <li>✓ Segurança alimentar</li>
+                        <li>✓ Inclusão digital rural</li>
+                    </ul>
+                </div>
+                
+                <div class="impacto-card">
+                    <h3>Ambiental</h3>
+                    <ul>
+                        <li>✓ Preservação de nascentes</li>
+                        <li>✓ Redução de emissões</li>
+                        <li>✓ Conservação do solo</li>
+                        <li>✓ Proteção da biodiversidade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Junte-se a nós na construção de um futuro mais sustentável</p>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto">
+                        <option value="">Selecione um assunto</option>
+                        <option value="parceria">Parcerias</option>
+                        <option value="consultoria">Consultoria</option>
+                        <option value="cursos">Cursos e Treinamentos</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Sua mensagem..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            </form>
+            
+            <div id="successMessage" class="success-message" style="display: none;">
+                ✅ Mensagem enviada com sucesso! Entraremos em contato em breve.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌱 AgroForte</h3>
+                    <p>Compromisso com a produção sustentável e o futuro do planeta.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#praticas">Práticas</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📧 contato@agroforte.com.br</p>
+                    <p>📞 (11) 3000-0000</p>
+                    <p>📍 São Paulo, Brasil</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">💼</a>
+                        <a href="#" class="social-link">📱</a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="rodape-clean">
-        <p>Desenvolvimento Científico e Tecnológico voltado ao Agronegócio Sustentável.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroForte - Todos os direitos reservados. Desenvolvido com 💚 para um futuro sustentável.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
