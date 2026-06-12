@@ -97,7 +97,6 @@ document.querySelectorAll('section').forEach(section => {
 
 // Header com efeito de scroll
 const header = document.querySelector('header');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
@@ -108,7 +107,7 @@ window.addEventListener('scroll', () => {
         header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
     } else {
         header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
     }
     
     // Atualizar link ativo no menu baseado na posição do scroll
@@ -129,68 +128,70 @@ window.addEventListener('scroll', () => {
             }
         }
     });
-    
-    lastScroll = currentScroll;
 });
 
 // Formulário de contato
 const contactForm = document.getElementById('contactForm');
 const successMessage = document.getElementById('successMessage');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Simular envio do formulário
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // Validação simples
-    if (!data.nome || !data.email || !data.mensagem) {
-        alert('Por favor, preencha todos os campos obrigatórios.');
-        return;
-    }
-    
-    // Validar email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.email)) {
-        alert('Por favor, insira um email válido.');
-        return;
-    }
-    
-    // Mostrar mensagem de sucesso
-    successMessage.style.display = 'block';
-    contactForm.reset();
-    
-    // Esconder mensagem após 5 segundos
-    setTimeout(() => {
-        successMessage.style.display = 'none';
-    }, 5000);
-    
-    // Scroll até a mensagem de sucesso
-    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    
-    // Aqui você pode adicionar a lógica para enviar os dados para um servidor
-    console.log('Dados do formulário:', data);
-});
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Simular envio do formulário
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
+        
+        // Validação simples
+        if (!data.nome || !data.email || !data.mensagem) {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return;
+        }
+        
+        // Validar email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+            alert('Por favor, insira um email válido.');
+            return;
+        }
+        
+        // Mostrar mensagem de sucesso
+        successMessage.style.display = 'block';
+        contactForm.reset();
+        
+        // Esconder mensagem após 5 segundos
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 5000);
+        
+        // Scroll até a mensagem de sucesso
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Aqui você pode adicionar a lógica para enviar os dados para um servidor
+        console.log('Dados do formulário:', data);
+    });
+}
 
 // Máscara para telefone
 const telefoneInput = document.getElementById('telefone');
 
-telefoneInput.addEventListener('input', (e) => {
-    let value = e.target.value.replace(/\D/g, '');
-    
-    if (value.length > 0) {
-        if (value.length <= 2) {
-            value = `(${value}`;
-        } else if (value.length <= 7) {
-            value = `(${value.substring(0, 2)}) ${value.substring(2)}`;
-        } else {
-            value = `(${value.substring(0, 2)}) ${value.substring(2, 7)}-${value.substring(7, 11)}`;
+if (telefoneInput) {
+    telefoneInput.addEventListener('input', (e) => {
+        let value = e.target.value.replace(/\D/g, '');
+        
+        if (value.length > 0) {
+            if (value.length <= 2) {
+                value = `(${value}`;
+            } else if (value.length <= 7) {
+                value = `(${value.substring(0, 2)}) ${value.substring(2)}`;
+            } else {
+                value = `(${value.substring(0, 2)}) ${value.substring(2, 7)}-${value.substring(7, 11)}`;
+            }
         }
-    }
-    
-    e.target.value = value;
-});
+        
+        e.target.value = value;
+    });
+}
 
 // Efeito parallax suave no hero
 window.addEventListener('scroll', () => {
@@ -215,4 +216,88 @@ document.querySelectorAll('.card, .tech-item, .impacto-card').forEach(card => {
 
 // Carregar animações iniciais
 window.addEventListener('load', () => {
-    // Animar hero imediat
+    // Animar hero imediatamente
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.style.opacity = '1';
+    }
+    
+    // Iniciar contadores se a seção sobre estiver visível
+    const sobreSection = document.querySelector('#sobre');
+    if (sobreSection) {
+        const rect = sobreSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (rect.top < windowHeight && rect.bottom > 0) {
+            animateStats();
+        }
+    }
+    
+    // Remover loader se existir
+    const loader = document.querySelector('.loader');
+    if (loader) {
+        loader.style.display = 'none';
+    }
+});
+
+// Prevenir comportamento padrão de links que começam com #
+document.querySelectorAll('a[href="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+});
+
+// Adicionar classe para animação quando elementos entram na viewport
+const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.card, .tech-item, .impacto-card, .stat-item');
+    
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight - 100) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }
+    });
+};
+
+// Inicializar estilos para animação
+document.querySelectorAll('.card, .tech-item, .impacto-card, .stat-item').forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+});
+
+// Escutar evento de scroll para animações
+window.addEventListener('scroll', animateOnScroll);
+// Executar uma vez ao carregar
+window.addEventListener('load', animateOnScroll);
+
+// Debounce para melhor performance no scroll
+function debounce(func, wait = 10) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Aplicar debounce no evento de scroll para melhor performance
+window.addEventListener('scroll', debounce(() => {
+    const header = document.querySelector('header');
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 50) {
+        header.style.background = 'rgba(255, 255, 255, 0.98)';
+    } else {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+    }
+}));
+
+console.log('🌱 AgroForte - Site carregado com sucesso!');
+console.log('💚 Compromisso com um futuro sustentável!');
